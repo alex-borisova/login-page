@@ -1,0 +1,14 @@
+.card-wrapper {
+    display: flex;
+    justify-content: center
+}
+.card {
+    width: fit-content;
+    height: fit-content;
+    max-width: 350px; //TODO: width
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 15px grey;
+    background: linear-gradient(rgb(214 204 223 / 78%), rgb(180 180 207 / 59%));
+
+}

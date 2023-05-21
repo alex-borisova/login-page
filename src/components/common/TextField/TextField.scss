@@ -1,0 +1,47 @@
+$active: white;
+$notActive: rgba(255, 255, 255, 0.531);
+
+
+.text-filed {
+    display: flex;
+    flex-direction: column;
+    color: $active;
+
+    &__input-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid $notActive;
+
+        &_active{
+            border-bottom: 1px solid $active;
+        }
+    }
+
+    &__icon {
+        color: $notActive;
+
+        &_active{
+            color: $active;
+        }
+
+    }
+
+    &__input {
+        border: none;
+        padding: 8px 4px;
+        background: none;
+        color: inherit;
+        width: 100%;
+        color: $active;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__label {
+        font-weight: 500;
+    }
+}
