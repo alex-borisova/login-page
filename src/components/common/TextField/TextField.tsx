@@ -2,7 +2,7 @@ import React, { FC } from "react";
 
 import "./TextField.scss";
 
-interface TextFieldProps {
+interface InputTextFieldProps {
   name?: string;
   value?: string;
   onChange?: (props?: any) => void;
@@ -11,7 +11,7 @@ interface TextFieldProps {
   placeholder?: string;
   endIcon?: React.ReactElement;
 }
-export const TextField: FC<TextFieldProps> = ({
+export const InputTextField: FC<InputTextFieldProps> = ({
   name,
   value,
   onChange,

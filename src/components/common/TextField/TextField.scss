@@ -13,6 +13,7 @@ $notActive: rgba(255, 255, 255, 0.531);
         justify-content: space-between;
         align-items: center;
         border-bottom: 1px solid $notActive;
+        padding-right: 4px;
 
         &_active{
             border-bottom: 1px solid $active;
@@ -30,7 +31,7 @@ $notActive: rgba(255, 255, 255, 0.531);
 
     &__input {
         border: none;
-        padding: 8px 4px;
+        padding: 4px;
         background: none;
         color: inherit;
         width: 100%;

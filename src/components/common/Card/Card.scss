@@ -1,14 +1,31 @@
 .card-wrapper {
-    display: flex;
-    justify-content: center
+  display: flex;
+  justify-content: center;
+
 }
 .card {
-    width: fit-content;
-    height: fit-content;
-    max-width: 350px; //TODO: width
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 2px 2px 15px grey;
-    background: linear-gradient(rgb(214 204 223 / 78%), rgb(180 180 207 / 59%));
+  padding: 35px;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 15px grey;
+  background: linear-gradient(rgb(214 204 223 / 78%), rgb(180 180 207 / 59%));
+  transition: max-width 0.3s ease-in-out;
+  @extend .card-wrapper;
+  flex-direction: column;
+  gap: 20px;
 
+
+}
+
+@media (max-width: 576px) {
+  .card {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 450px) {
+  .card {
+    max-width: 220px;
+  }
 }

@@ -1,9 +1,14 @@
 import React, { FC, useState } from "react";
 
 import "./Login.scss";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+
 import { Card } from "../common/Card/Card";
-import { TextField } from "../common/TextField/TextField";
+import { InputTextField } from "../common/TextField/TextField";
 import { loginData } from "../../types/loginData.type";
+import { ShowPasswordButton } from "../ShowPasswordButton/ShowPasswordButton";
 
 export const Login: FC = () => {
   const [loginData, setLoginData] = useState<loginData>({
@@ -17,17 +22,29 @@ export const Login: FC = () => {
       setLoginData((prev) => ({ ...prev, [filed]: event.target.value }));
     };
 
+  const [showPassword, setShowPassword] = useState<boolean>(false);
+
   return (
     <Card>
-      <TextField
+      <h2 className="login__title">Login</h2>
+      <InputTextField
         label="Email"
+        type="email"
         value={loginData.login}
         onChange={handleLoginData("login")}
+        endIcon={<FontAwesomeIcon icon={faEnvelope} />}
       />
-      <TextField
+      <InputTextField
         label="Password"
+        type={showPassword ? "text" : "password"}
         value={loginData.password}
         onChange={handleLoginData("password")}
+        endIcon={
+          <ShowPasswordButton
+            showPassword={showPassword}
+            setShowPassword={setShowPassword}
+          />
+        }
       />
     </Card>
   );
